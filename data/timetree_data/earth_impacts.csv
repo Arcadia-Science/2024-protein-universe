@@ -1,0 +1,188 @@
+impact_id,impact_name,impact_location,impact_max_age,impact_min_age,impact_diameter,impact_latitude,impact_longitude
+1,Kamil,Egypt,0.0005,,0.045,22.01666667,26.08333333
+2,Carancas,Peru,0.000007,0.000007,0.0135,-16.66666667,-69.05
+3,"Sikhote Alin",Russia,0.000067,0.000067,0.02,46.11666667,134.6666667
+4,Wabar,"Saudi Arabia",0.00014,0.00014,0.11,21.5,50.46666667
+5,Haviland,"Kansas, U.S.A.",0.001,,0.01,37.58333333,-99.16666667
+6,Sobolev,Russia,0.001,,0.05,46.3,137.8666667
+7,Whitecourt,"Alberta, Canada ",0.0011,,0.04,54,-115.6
+8,"Campo Del Cielo",Argentina,0.004,,0.05,-27.63333333,-61.7
+9,Kaalijarv,Estonia,0.005,0.003,0.11,58.4,22.66666667
+10,Henbury,"Northern Territory",0.0061,0.0023,0.15,-24.56666667,133.1333333
+11,Boxhole,"Northern Territory",0.0069,0.0039,0.17,-22.61666667,135.2
+12,Ilumetsa,Estonia,0.0066,0.0066,0.08,57.96666667,27.41666667
+13,Macha,Russia,0.007,,0.3,60.1,117.5833333
+14,Morasko,Poland,0.01,,0.1,52.48333333,16.9
+15,Tenoumer,Mauritania,0.0311,0.0117,1.9,22.91666667,-10.4
+16,Barringer,"Arizona, U.S.A.",0.052,0.046,1.18,35.03333333,-111.0166667
+17,Lonar,India,0.058,0.046,1.83,19.96666667,76.51666667
+18,Xiuyan,"Texas, U.S.A.",,0.05,0.16,31.75,-102.4833333
+19,Odessa,"Texas, U.S.A.",0.0635,,0.16,31.75,-102.4833333
+20,Amguid,Algeria,0.1,,0.45,26.08333333,4.383333333
+21,"Rio Cuarto",Argentina,0.1,,4.5,-32.86666667,-64.23333333
+22,Tswaing,"South Africa",0.272,0.168,1.13,-25.4,28.08333333
+23,Kalkkop,"South Africa",0.3,0.2,0.64,-32.71666667,24.43333333
+24,Dalgaranga,"Western Australia",0.27,0.27,0.02,-27.63333333,117.2833333
+25,"Wolfe Creek","Western Australia",0.3,,0.87,-19.16666667,127.8
+26,Zhamanshin,Kazakhstan,1,0.8,14,48.4,60.96666667
+27,Veevers,"Western Australia",1,,0.08,-22.96666667,125.3666667
+28,Monturaqui,Chile,1,,0.46,-23.93333333,-68.28333333
+29,Bosumtwi,Ghana,1.07,,10.5,6.5,-1.416666667
+30,"New Quebec","Quebec, Canada",1.5,1.3,3.44,61.28333333,-73.66666667
+31,Talemzane,Algeria,3,,1.75,33.31666667,4.033333333
+32,Aouelloul,Mauritania,3.3,2.7,0.39,20.25,-12.68333333
+33,"El'gygytgyn",Russia,4,3,18,67.5,172.0833333
+34,"Roter Kamm",Namibia,4,3.4,2.5,-27.76666667,16.3
+35,Kara-Kul,Tajikistan,5,,52,39.01666667,73.45
+36,Karla,Russia,6,4,10,54.91666667,48.03333333
+37,Bigach,Kazakhstan,8,2,8,48.56666667,82.01666667
+38,Colonia,Brazil,36,5,3.6,-23.86666667,-46.71666667
+39,Steinheim,Germany,16,14,3.8,48.68333333,10.06666667
+40,Ries,Germany,15.2,15,24,48.88333333,10.61666667
+41,"Chesapeake Bay","Virginia, U.S.A.",35.4,35.2,40,37.28333333,-76.01666667
+42,Popigai,Russia,35.9,35.5,90,71.65,111.1833333
+43,Flaxman,Australia,35,,10,-34.61666667,139.0666667
+44,Crawford,Australia,35,,8.5,-34.71666667,139.0333333
+45,Mistastin,"Newfoundland/Labrador, Canada",40.4,32.4,28,55.88333333,-63.3
+46,Wanapitei,"Ontario, Canada",38.4,36,7.5,46.75,-80.75
+47,Haughton,"Nunavut, Canada",39,39,23,75.36666667,-89.68333333
+48,Logancha,Russia,60,20,20,65.51666667,95.93333333
+49,Beyenchime-Salaatin,Russia,60,20,8,71,121.6666667
+50,Logoisk,Belarus,43.4,41.2,15,54.2,27.8
+51,Shunak,Kazakhstan,55,35,2.8,47.2,72.7
+52,Ragozinka,Russia,49,43,9,58.73333333,61.8
+53,Chiyli,Kazakhstan,53,39,5.5,49.16666667,57.85
+54,Kamensk,Russia,49.2,48.8,25,48.35,40.5
+55,Gusev,Russia,49.2,48.8,3,48.43333333,40.53333333
+56,"Goat Paddock","Western Australia",50,,5.1,-18.33333333,126.6666667
+57,Montagnais,"Nova Scotia, Canada",51.26,49.74,45,42.88333333,-64.21666667
+58,"Jebel Waqf as Suwwan",Jordan,56,37,5.5,31.05,36.8
+59,Marquez,"Texas, U.S.A.",60,56,12.7,31.28333333,-96.3
+60,"Connolly Basin","Western Australia",60,,9,-23.53333333,124.75
+61,Chicxulub,"Yucatan, Mexico",65.03,64.93,150,21.33333333,-89.5
+62,"Vista Alegre",Brazil,65,,9.5,-25.95,-52.68333333
+63,"Eagle Butte","Alberta, Canada",65,,10,49.7,-110.5
+64,Boltysh,Ukraine,65.81,64.53,24,48.75,32.16666667
+65,"Tin Bider",Algeria,70,,6,27.6,5.116666667
+66,Ouarkziz,Algeria,70,,3.5,29,-7.55
+67,Chukcha,Russia,70,,6,75.7,97.8
+68,Kara,Russia,72.5,68.1,65,69.1,64.15
+69,Manson,"Iowa, U.S.A.",74.2,74,35,42.58333333,-94.55
+70,"Maple Creek","Saskatchewan, Canada",75,,6,49.8,-109.1
+71,Lappajarvi,Finland,76.49,75.91,23,63.2,23.7
+72,"Zeleny Gai",Ukraine,100,60,3.5,48.06666667,32.75
+73,Wetumpka,"Alabama, U.S.A.",82.5,79.5,6.5,32.51666667,-86.16666667
+74,Dellen,Sweden,91.7,86.3,19,61.8,16.8
+75,"Steen River","Alberta, Canada",98,84,25,59.5,-117.6333333
+76,Avak,"Alaska, U.S.A.",95,3,12,71.25,-156.6333333
+77,Kentland,"Indiana, U.S.A.",97,,13,40.75,-87.4
+78,"Deep Bay","Saskatchewan, Canada",103,95,13,56.4,-102.9833333
+79,"Santa Marta",Brazil,100,66,10,-10.16666667,-45.25
+80,"Sierra Madera","Texas, U.S.A.",100,,13,30.6,-102.9166667
+81,"Mount Toondina","South Australia",110,,4,-27.95,135.3666667
+82,Carswell,"Saskatchewan, Canada",125,105,39,58.45,-109.5
+83,Oasis,Libya,120,,18,24.58333333,24.4
+84,"B.P. Structure",Libya,120,,2,25.31666667,24.33333333
+85,Rotmistrovka,Ukraine,130,110,2.7,49,32
+86,Mien,Sweden,123.3,118.7,9,56.41666667,14.86666667
+87,"Vargeao Dome",Brazil,124.4,121.6,12,-26.83333333,-52.11666667
+88,Tookoonoka,Queensland,133,123,55,-27.11666667,142.8333333
+89,"Tunnunik (Prince Albert)","Victoria Island, Arctic Canada",450,130,25,72.46666667,-113.9666667
+90,Mjolnir,Norway,144.6,139.4,40,73.8,29.66666667
+91,"Gosses Bluff","Northern Territory",143.3,141.7,22,-23.81666667,132.3166667
+92,Morokweng,"South Africa",145.8,144.2,70,-26.46666667,23.53333333
+93,Tabun-Khara-Obo,Mongolia,170,130,1.3,44.11666667,109.65
+94,Liverpool,"Northern Territory",220,80,1.6,-12.4,134.05
+95,Vepriai,Lithuania,,160,8,55.08333333,24.58333333
+96,Zapadnaya,Ukraine,170,160,3.2,49.73333333,29
+97,Puchezh-Katunki,Russia,170,164,40,56.96666667,43.71666667
+98,Obolon,Ukraine,176,162,20,49.58333333,32.91666667
+99,"Upheaval Dome","Utah, U.S.A.",170,,10,38.43333333,-109.9
+100,Kgagodi,Botswana,180,,3.5,-22.48333333,27.58333333
+101,Viewfield,"Saskatchewan, Canada",210,170,2.5,49.58333333,-103.0666667
+102,"Cloud Creek","Wyoming, USA",220,160,7,43.11666667,-106.75
+103,"Riachao Ring",Brazil,200,,4.5,-7.716666667,-46.65
+104,"Red Wing","North Dakota, U.S.A.",225,175,9,47.6,-103.55
+105,"Wells Creek","Tennessee, U.S.A.",300,100,12,36.38333333,-87.66666667
+106,Rochechouart,France,203,199,23,45.83333333,0.933333333
+107,Manicouagan,"Quebec, Canada",215,213,85,51.38333333,-68.7
+108,"Saint Martin","Manitoba, Canada",252,188,40,51.78333333,-98.53333333
+109,Karikkoselka,Finland,230,230,1.5,62.21666667,25.25
+110,Gow,"Saskatchewan, Canada",250,,5,56.45,-104.4833333
+111,"Suvasvesi S",Finland,250,250,3.8,62.6,28.21666667
+112,Kursk,Russia,330,170,6,51.7,36
+113,Araguainha,Brazil,257.2,252.2,40,-16.78333333,-52.98333333
+114,"Des Plaines","Illinois, U.S.A.",280,,8,42.05,-87.86666667
+115,Ternovka,Ukraine,290,270,11,48.13333333,33.51666667
+116,"Clearwater West","Quebec, Canada",310,270,36,56.21666667,-74.5
+117,Dobele,Latvia,325,255,4.5,56.58333333,23.25
+118,"Serra da Cangalha",Brazil,300,,12,-8.083333333,-46.86666667
+119,Middlesboro,"Kentucky, U.S.A.",300,,6,36.61666667,-83.73333333
+120,"Ile Rouleau","Quebec, Canada",300,,4,50.68333333,-73.88333333
+121,Decaturville,"Missouri, U.S.A.",300,,6,37.9,-92.71666667
+122,"Mishina Gora",Russia,350,250,2.5,58.71666667,28.05
+123,"Serpent Mound","Ohio, U.S.A.",320,,8,39.03333333,-83.4
+124,"Crooked Creek","Missouri, U.S.A.",400,240,7,37.83333333,-91.38333333
+125,Charlevoix,"Quebec, Canada",357,327,54,47.53333333,-70.3
+126,Gweni-Fada,Chad,345,,14,17.41666667,21.75
+127,Aorounga,Chad,345,,12.6,19.1,19.25
+128,"West Hawk","Manitoba, Canada",371,331,2.44,49.76666667,-95.18333333
+129,Piccaninny,"Western Australia",360,,7,-17.53333333,128.4166667
+130,"Flynn Creek","Tennessee, U.S.A.",380,340,3.8,36.28333333,-85.66666667
+131,Woodleigh,"Western Australia",372,356,40,-26.05,114.65
+132,Siljan,Sweden,378.5,375.1,52,61.03333333,14.86666667
+133,Ilyinets,Ukraine,383,373,8.5,49.11666667,29.1
+134,Kaluga,Russia,385,375,15,54.5,36.2
+135,Elbow,"Saskatchewan, Canada",420,370,8,50.98333333,-106.7166667
+136,Nicholson,"Northwest Territories, Canada",400,,12.5,62.66666667,-102.6833333
+137,"La Moinerie","Quebec, Canada",450,350,8,57.43333333,-66.61666667
+138,Glasford,"Illinois, U.S.A.",430,,4,40.6,-89.78333333
+139,Couture,"Quebec, Canada",455,405,8,60.13333333,-75.33333333
+140,Pilot,"Northwest Territories, Canada",447,443,6,60.28333333,-111.0166667
+141,"Slate Islands","Ontario, Canada",450,450,30,48.66666667,-87
+142,Calvin,"Michigan, USA",460,440,8.5,41.83333333,-85.95
+143,Brent,"Michigan, USA",,453,8.5,41.83333333,-85.95
+144,Tvaren,Sweden,455,455,2,58.76666667,17.41666667
+145,Kardla,Estonia,455,455,4,59.01666667,22.76666667
+146,Lockne,Sweden,458,458,7.5,63,14.81666667
+147,Malingen,Sweden,458,458,1,62.91666667,14.55
+148,"Clearwater East","Quebec, Canada",470,460,26,56.08333333,-74.11666667
+149,Ames,"Oklahoma, U.S.A.",500,440,16,36.25,-98.2
+150,Granby,Sweden,470,470,3,58.41666667,14.93333333
+151,"Presqu'ile","Quebec, Canada",500,,24,49.71666667,-74.8
+152,Newporte,"North Dakota, U.S.A.",500,,3.2,48.96666667,-101.9666667
+153,"Glover Bluff","Wisconsin, U.S.A.",500,,8,43.96666667,-89.53333333
+154,Gardnos,Norway,510,490,5,60.65,9
+155,Mizarai,Lithuania,520,480,5,54.01666667,23.9
+156,"Rock Elm","Wisconsin, U.S.A.",505,,6,44.71666667,-92.23333333
+157,Glikson,Australia,508,,19,-23.98333333,121.5666667
+158,"Lawn Hill",Queensland,,515,18,-18.66666667,138.65
+159,Ritland,Norway,540,500,2.7,59.23333333,6.433333333
+160,Neugrund,Estonia,535,535,8,59.33333333,23.66666667
+161,Foelsche,"Northern Territory",,545,6,-16.66666667,136.7833333
+162,Holleford,"Ontario, Canada",650,450,2.35,44.46666667,-76.63333333
+163,"Kelly West","Northern Territory",,550,10,-19.93333333,133.95
+164,Saaksjarvi,Finland,560,560,6,61.4,22.4
+165,Spider,"Western Australia",,570,13,-16.73333333,126.0833333
+166,Luizi,"Democratic Republic of Congo",573,,17,-10.16666667,28
+167,Acraman,"South Australia",590,590,90,-32.01666667,135.45
+168,Soderfjarden,Finland,600,600,6.6,63.03333333,21.58333333
+169,Beaverhead,"Montana, U.S.A.",600,600,60,44.6,-113
+170,Saarijarvi,Finland,,600,1.5,65.28333333,28.38333333
+171,Strangways,"Northern Territory",688,604,25,-15.2,133.5833333
+172,Janisjarvi,Russia,705,695,14,61.96666667,30.91666667
+173,"Suvasvesi N",Finland,1000,,4,62.7,28.16666667
+174,Lumparn,Finland,1000,1000,9,60.15,20.1
+175,Iso-Naakkima,Finland,,1000,3,62.18333333,27.15
+176,"Santa Fe","New Mexico, U.S.A.",1200,,13,35.75,-105.9333333
+177,Goyder,"Northern Territory",1400,,3,-13.46666667,135.0333333
+178,"Matt Wilson","Northern Territory",1842,962,7.5,-15.5,131.1833333
+179,Shoemaker,"Western Australia",1635,1625,30,-25.86666667,120.8833333
+180,"Amelia Creek",Australia,1640,600,20,-20.91666667,134.8333333
+181,Dhala,India,2100,1700,11,25.2999167,78.1341944
+182,Keurusselka,Finland,,1800,30,62.13333333,24.6
+183,Paasselka,Finland,,1800,10,62.03333333,29.08333333
+184,Sudbury,"Ontario, Canada",1853,1847,130,46.6,-81.18333333
+185,Yarrabubba,"Western Australia",2000,2000,30,-27.16666667,118.8333333
+186,Vredefort,"South Africa",2027,2019,160,-27,27.5
+187,Suavjarvi,Russia,2400,2400,16,63.11666667,33.38333333
