@@ -315,7 +315,7 @@ summary(mod)
 #####Figure 4: Phylogenetic distribution of "representative proteins"#####
 ##########################################################################
 #Get taxa for representative proteins
-representatives = dat$taxonomy_ID[match(cluster_stats$cluster_ID, dat$member_ID)]
+representatives = unique(dat$taxonomy_ID[match(cluster_stats$cluster_ID, dat$member_ID)])
 
 #Get taxonomic IDs for each
 representatives_taxonomy = afdb_taxonomy[match(representatives,
@@ -422,8 +422,122 @@ title(main = 'Taxonomic completeness',
 cor(as.numeric(weighted_pds_all),
     as.numeric(weighted_pds_rep))
 
+###################################################################
+#####Figure 5: pLDDT as a function of Foldseek representatives#####
+###################################################################
+#Add ncbi id to cluster_stats
+cluster_stats$ncbi = dat$taxonomy_ID[match(cluster_stats$cluster_ID,
+                                           dat$member_ID)]
+
+#Get taxa for representative proteins
+representatives = dat$taxonomy_ID[match(cluster_stats$cluster_ID, dat$member_ID)]
+
+#Get taxonomic IDs for each
+representatives_taxonomy = afdb_taxonomy[match(representatives,
+                                               afdb_taxonomy$ncbi_id),]
+
+#Add phylum to cluster stats
+cluster_stats$phylum = representatives_taxonomy$phylum[match(cluster_stats$ncbi,
+                                                             representatives_taxonomy$ncbi_id)]
+cluster_stats$species = representatives_taxonomy$species[match(cluster_stats$ncbi,
+                                                               representatives_taxonomy$ncbi_id)]
+
+#Get n proteins per species
+species_n = lapply(split(dat, 
+                         dat$taxonomy_ID),
+                   function(x) nrow(x))
+
+#Split
+s = split(cluster_stats,
+          cluster_stats$ncbi)
+
+#Match
+species_n = species_n[match(names(s),
+                            names(species_n))]
+
+#Sweep protein n cutoffs and calculate correlation
+cors = c()
+for(i in 1:2500){
+  print(i)
+  #Filter
+  s_filter = s[unlist(lapply(s, function(x) nrow(x)))>=i]
+  
+  #Recombine and simplify
+  p = unlist(lapply(s_filter, function(x) mean(x$repPlddt)))
+  n = unlist(species_n[match(names(p), 
+                             names(species_n))])
+  
+  #Correlate
+  cors = c(cors, cor(n, p, method = 'spearman'))
+}
+
+#Plot correlations
+par(mfrow = c(1,3))
+plot(cors,
+     ylab = 'Spearman R',
+     xlab = 'n representative proteins per species',
+     cex.lab = 1.5,
+     cex.axis = 1.5,
+     type = 'l',
+     lwd = 1.5,
+     col = all_colors[1])
+
+#Plot example
+#Filter
+s_filter = s[unlist(lapply(s, function(x) nrow(x)))>=1000]
+
+#Recombine and simplify
+p = unlist(lapply(s_filter, function(x) mean(x$repPlddt)))
+n = unlist(species_n[match(names(p), 
+                           names(species_n))])
+
+#Plot
+cols = all_colors[5:7]
+names(cols) = c('Archaea', 'Bacteria', 'Eukaryota')
+cols = cols[match(afdb_taxonomy$superkingdom[match(names(n), afdb_taxonomy$ncbi_id)],
+                  names(cols))]
+plot(n, 
+     p,
+     ylab = 'pLDDT',
+     xlab = 'n representative proteins per species',
+     cex.axis = 1.5,
+     cex.lab = 1.5,
+     pch = 20,
+     col = cols)
+
+#Correlate
+cor(n, p, method = 'spearman')
+
+#Compare plddts by kingdom
+plddts = split(p, 
+               afdb_taxonomy$superkingdom[match(names(n), afdb_taxonomy$ncbi_id)])
+
+#Plot
+vioplot::vioplot(plddts,
+                 col = all_colors[5:7],
+                 side = "right",
+                 ylab = '',
+                 xlab = '', 
+                 font.main = 1,
+                 cex.main = 1.5,
+                 las = 2, 
+                 cex.axis = 1.5,
+                 cex.lab = 1.5)
+title(ylab = 'pLDDT (representative protein)',
+      cex.lab = 1.5)
+
+stripchart(plddts,
+           col = all_colors[5:7],
+           at = seq(0.8, (length(plddts)-1)+0.8, 1), 
+           jitter = 0.1,
+           method = "jitter", 
+           vertical = TRUE, 
+           cex = 1,
+           pch = 20, 
+           add = TRUE)
+
 #####################################################
-#####Figure 5: Protein cluster diversity by taxa#####
+#####Figure 6: Protein cluster diversity by taxa#####
 #####################################################
 #Set up taxa to measure space coverage over
 toTest = c("superkingdom", "phylum", 'class', 'order', 'family', 'genus', 'species')
@@ -723,6 +837,7 @@ plot(names(pds)[2:length(pds)],
      type = 'l',
      lwd = 1.5)
 
+
 #Simulate phylogenetic distance given 80/20 training/test partitioning given different min protein n
 #Simulate of different min protein n
 train_test_simulation = list()
@@ -793,20 +908,17 @@ cluster_stats$ncbi = dat$taxonomy_ID[match(cluster_stats$cluster_ID,
                                            dat$member_ID)]
 
 #Match phyla to ncbi ids
-taxa = afdb_taxonomy$phylum[match(cluster_stats$ncbi,
+taxa = afdb_taxonomy$order[match(cluster_stats$ncbi,
                                   afdb_taxonomy$ncbi_id)]
 
 #Split
 cluster_stats_taxa = split(cluster_stats, taxa)
 
-cluster_stats_taxa = cluster_stats_taxa[afdb_taxonomy$superkingdom[match(names(cluster_stats_taxa),
-                                                                         afdb_taxonomy$phylum)]== 'Bacteria']
-
 #Calculate mean plddt
 mean_plddts = unlist(lapply(cluster_stats_taxa, function(x) mean(x$avgPlddt)))
 
 #Compare to n proteins
-plot(log(unlist(lapply(cluster_stats_taxa, function(x) nrow(x)))),
+plot(unlist(lapply(cluster_stats_taxa, function(x) nrow(x))),
      mean_plddts)
 
 
