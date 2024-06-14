@@ -3,18 +3,15 @@ source("code/R/protein-universe-utils.R")
 ###########################################################################
 ##### Load data (will need to change paths based on whever data end up)#####
 ###########################################################################
-# Set working directory
-setwd("~/Desktop/protein_space_size_estimation/")
-
 # Load all files
-dat <- readRDS("02_output/afdb_clusters.RDS")
-afdb_taxonomy <- readRDS("02_output/afdb_cluster_taxonomy.RDS")
-cluster_stats <- readRDS("02_output/afdb_cluster_stats.RDS")
-tree <- readRDS("02_output/timetree_phylogeny_cleaned.RDS")
-tree_taxonomy <- readRDS("02_output/timetree_taxonomy.RDS")
-pdb <- readRDS("02_output/pdb_metadata.RDS")
-pdb_taxonomy <- readRDS("02_output/pdb_taxonomy.RDS")
-genome_stats <- readRDS("02_output/afdb_genome_size_stats.RDS")
+dat <- readRDS("data/afdb_clusters.RDS")
+afdb_taxonomy <- readRDS("data/afdb_cluster_taxonomy.RDS")
+cluster_stats <- readRDS("data/afdb_cluster_stats.RDS")
+tree <- readRDS("data/timetree_phylogeny_cleaned.RDS")
+tree_taxonomy <- readRDS("data/timetree_taxonomy.RDS")
+pdb <- readRDS("data/pdb_metadata.RDS")
+pdb_taxonomy <- readRDS("data/pdb_taxonomy.RDS")
+genome_stats <- readRDS("data/afdb_genome_size_stats.RDS")
 
 ####################################################
 ##### Figure 1: PDB + AFDB species distributions#####
