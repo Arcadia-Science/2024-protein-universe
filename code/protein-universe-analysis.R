@@ -1,4 +1,4 @@
-source("code/R/protein-universe-utils.R")
+source("code/protein-universe-utils.R")
 
 ###########################################################################
 ##### Load data (will need to change paths based on whever data end up)#####
