@@ -216,7 +216,7 @@ pds_fam <- clade_PD(tree_taxonomy,
 )
 
 # Extract weighted phylogenetic distances (i.e. 'taxonomic completenes')
-weighted_pds <- unlist(lapply(
+weighted_pds <- sapply(
   pds_fam$phylogenetic_distance,
   function(x) x$weighted_PD
 ))
