@@ -22,7 +22,7 @@ dat <- read.delim("1-AFDBClusters-entryId_repId_taxId.tsv",
 # Add column names
 colnames(dat) <- c(
   "member_ID",
-  " cluster_ID",
+  "cluster_ID",
   "taxonomy_ID"
 )
 
