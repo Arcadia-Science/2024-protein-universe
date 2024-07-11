@@ -1,12 +1,10 @@
-# TODO: Replace with the name of the repo
+# 2024-protein-universe
 
 [![run with conda](http://img.shields.io/badge/run%20with-conda-3EB049?labelColor=000000&logo=anaconda)](https://docs.conda.io/projects/miniconda/en/latest/)
 
-Note: Analysis repo names should be prefixed with the year (ie `2024-noveltree-analysis`). This prefix can be changed at time of publication if appropriate.
-
 ## Purpose
 
-TODO: Briefly describe the core analyses performed in the repository and the motivation behind them.
+This repository contains code related to the pub "The known protein universe is phylogenetically biased".
 
 ## Installation and Setup
 
@@ -34,6 +32,34 @@ TODO: Add details about the description of input / output data and links to Zeno
 ## Overview
 
 ### Description of the folder structure
+
+The repository is organized into the following top-level directories.
+
+* **code**:
+  R scripts used for downloading and cleaning data, performing analysis, and generating figures presented in the pub.
+* **data**:
+ .RDS files used in analyses.
+* **envs**:
+  YAML file including the packages and dependencies used for creating the conda environment.
+
+```
+─ code
+  ├── README.md
+  ├── protein-universe-analysis.R
+  ├── protein-universe-data.R
+  └── protein-universe-utils.R
+─ data
+  ├── README.md
+  ├── afdb_cluster_stats.RDS
+  ├── afdb_cluster_taxonomy.RDS
+  ├── afdb_genome_size_stats.RDS
+  ├── pdb_metadata.RDS
+  ├── pdb_taxonomy.RDS
+  ├── timetree_phylogeny_cleaned.RDS
+  └── timetree_taxonomy.RDS
+─ envs
+  └── dev.yml
+```
 
 ### Methods
 
