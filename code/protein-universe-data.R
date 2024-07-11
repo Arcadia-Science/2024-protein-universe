@@ -4,8 +4,8 @@ source("code/protein-universe-utils.R")
 ##### Download data#####
 #######################
 # Download data from Foldseek
-system("wget https://afdb-cluster.steineggerlab.workers.dev/1-AFDBClusters-entryId_repId_taxId.tsv.gz")
-system("wget https://afdb-cluster.steineggerlab.workers.dev/2-repId_isDark_nMem_repLen_avgLen_repPlddt_avgPlddt_LCAtaxId.tsv.gz")
+system("wget -O - https://afdb-cluster.steineggerlab.workers.dev/1-AFDBClusters-entryId_repId_taxId.tsv.gz | gunzip -c > 1-AFDBClusters-entryId_repId_taxId.tsv")
+system("wget -O - https://afdb-cluster.steineggerlab.workers.dev/2-repId_isDark_nMem_repLen_avgLen_repPlddt_avgPlddt_LCAtaxId.tsv.gz | gunzip -c > 2-repId_isDark_nMem_repLen_avgLen_repPlddt_avgPlddt_LCAtaxId.tsv")
 
 # Prepare NCBI taxonomy accession database
 prepareDatabase(getAccessions = FALSE)
