@@ -788,7 +788,7 @@ text(20000, 70, colnames(tree_taxonomy)[6], col = cols[6], adj = 1)
 
 ## Assess the effect of data balancing on cluster n
 # Calculate total n of clusters within data set
-clusters_total <- length(unique(dat$` cluster_ID`[dat$taxonomy_ID %in%
+clusters_total <- length(unique(dat$`cluster_ID`[dat$taxonomy_ID %in%
   pds[[1]]$taxonomy$ncbi_id]))
 
 # Calculate  cluster n per partition
