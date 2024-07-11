@@ -2,7 +2,13 @@ library(ape)
 library(phytools)
 library(picante)
 library(RColorBrewer)
-
+library(taxonomizr)
+library(taxizedb)
+library(packcircles)
+library(ggplot2)
+library(dunn.test)
+library(vioplot)
+library(caper)
 # Function to simplify an NCBI taxonomy record per species
 # Inputs:
 #' taxa': NCBI IDs for a set of species
