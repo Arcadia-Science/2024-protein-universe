@@ -48,8 +48,8 @@ cluster_stats <- read.delim("2-repId_isDark_nMem_repLen_avgLen_repPlddt_avgPlddt
 # Add column names
 colnames(cluster_stats) <- c(
   "cluster_ID",
-  "isDark", "
-                            n_members",
+  "isDark", 
+  "n_members",
   "repLength",
   "avgLength",
   "repPlddt",
