@@ -135,7 +135,7 @@ genome_stats <- rbind(euk_stats, prok_stats)
 # Split on species
 g <- split(
   genome_stats,
-  genome_stats$TaxID
+  genome_stats$ncbi_id
 )
 
 # Calculate mean statistics
