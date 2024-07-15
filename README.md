@@ -11,18 +11,8 @@ This repository contains code related to the pub "The known protein universe is 
 This repository uses conda to manage software environments and installations. You can find operating system-specific instructions for installing miniconda [here](https://docs.conda.io/projects/miniconda/en/latest/). After installing conda and [mamba](https://mamba.readthedocs.io/en/latest/), run the following command to create the pipeline run environment.
 
 ```{bash}
-TODO: Replace <NAME> with the name of your environment
-mamba env create -n <NAME> --file envs/dev.yml
-conda activate <NAME>
-```
-
-**Tips for Developers**
-
-You can use the following command to export your current conda environment to a `yml` file.  
-This command will only export the packages that you have installed directly, not the ones that were installed as dependencies. When you're ready to share, please delete this section.
-
-```{bash}
-conda env export --from-history --no-builds > envs/dev.yml
+mamba env create -n protein_universe --file envs/dev.yml
+conda activate protein_universe
 ```
 
 ## Data
