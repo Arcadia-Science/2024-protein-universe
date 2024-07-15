@@ -27,7 +27,7 @@ conda env export --from-history --no-builds > envs/dev.yml
 
 ## Data
 
-TODO: Add details about the description of input / output data and links to Zenodo depositions, if applicable.
+
 
 ## Overview
 
@@ -63,18 +63,13 @@ The repository is organized into the following top-level directories.
 
 ### Methods
 
-TODO: Include a brief, step-wise overview of analyses performed.
-
-> Example:
->
-> 1. Download scripts using `download.sh`.
-> 2. Preprocess using `./preprocessing.sh -a data/`
-> 3. Run analysis script using `analysis.Rscript`
-> 4. Generate figures using `pub/make_figures.R`.
+> 1. Download, clean, and organize data using `protein-universe-data.R`.
+> 2. Load supporting functions using `protein-universe-utils.R`
+> 3. Run analyses using `protein-universe-analysis.R`
 
 ### Compute Specifications
 
-TODO: Describe what compute resources were used to develop and run the analysis. For example, you could list the operating system, number of cores, RAM, and storage space. You should log any major changes to the compute specifications here as they happen.
+All analyses were done on an Apple MacBook Pro running macOS Montery with 32GB RAM, 10 cores, and 1TB of storage.
 
 ## Contributing
 
