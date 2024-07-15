@@ -74,17 +74,3 @@ All analyses were done on an Apple MacBook Pro running macOS Montery with 32GB R
 ## Contributing
 
 See how we recognize [feedback and contributions to our code](https://github.com/Arcadia-Science/arcadia-software-handbook/blob/main/guides-and-standards/guide-credit-for-contributions.md).
-
----
-## For Developers
-
-This section contains information for developers who are working off of this template. Please delete this section when you're ready to share your repository.
-
-### GitHub templates
-This template uses GitHub templates to provide checklists when making new pull requests. These templates are stored in the [.github/](./.github/) directory.
-
-### `.gitignore`
-This template uses a `.gitignore` file to prevent certain files from being committed to the repository.
-
-### Linting
-This template automates linting using GitHub Actions and the [`lintr` linter](https://cran.r-project.org/web/packages/lintr/vignettes/lintr.html). When you push changes to your repository, GitHub will automatically run the linter and report any errors, blocking merges until they are resolved. 
