@@ -121,7 +121,7 @@ simplify_ncbi <- function(taxa) {
 # to compare within (e.g. phylum or class)
 #' taxa2' = higher-resolution taxonomic grouping
 # to measure phylogenetic distance of (e.g. genus or family)
-clade_PD <- function(tree_taxonomy,
+clade_pd <- function(tree_taxonomy,
                      focal_taxonomy,
                      tree,
                      taxa1 = "class",
@@ -260,7 +260,8 @@ clade_PD <- function(tree_taxonomy,
     unlist(lapply(pds, function(x) x$weighted_PD)),
     plot = FALSE
   )
-  contmap$cols[1:length(contmap$cols)] <- colorRampPalette(brewer.pal(11, "RdYlBu"))(length(contmap$cols))
+  contmap$cols[1:length(contmap$cols)] <- 
+  colorRampPalette(brewer.pal(11, "RdYlBu"))(length(contmap$cols))
 
   # Plot if desired
   if (plot == TRUE) {

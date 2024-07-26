@@ -1,8 +1,8 @@
 source("code/protein-universe-utils.R")
 
-#######################
+########################
 ##### Download data#####
-#######################
+########################
 # Download data from Foldseek
 system("wget -O - https://afdb-cluster.steineggerlab.workers.dev/1-AFDBClusters-entryId_repId_taxId.tsv.gz | gunzip -c > 1-AFDBClusters-entryId_repId_taxId.tsv")
 system("wget -O - https://afdb-cluster.steineggerlab.workers.dev/2-repId_isDark_nMem_repLen_avgLen_repPlddt_avgPlddt_LCAtaxId.tsv.gz | gunzip -c > 2-repId_isDark_nMem_repLen_avgLen_repPlddt_avgPlddt_LCAtaxId.tsv")
@@ -10,9 +10,9 @@ system("wget -O - https://afdb-cluster.steineggerlab.workers.dev/2-repId_isDark_
 # Prepare NCBI taxonomy accession database
 prepareDatabase(getAccessions = FALSE)
 
-###################################################
+####################################################
 ##### Organize data + collect relevant metadata#####
-###################################################
+####################################################
 ##### AFDB IDs + cluster information#####
 # Load AFDB IDs + foldseek cluster information
 dat <- read.delim("1-AFDBClusters-entryId_repId_taxId.tsv",
@@ -41,7 +41,8 @@ afdb_taxonomy <- simplify_ncbi(afdb_taxonomy)
 
 ##### Foldseek cluster statistics#####
 # Load cluster statistics
-cluster_stats <- read.delim("2-repId_isDark_nMem_repLen_avgLen_repPlddt_avgPlddt_LCAtaxId.tsv",
+cluster_stats <- read.delim(
+  "2-repId_isDark_nMem_repLen_avgLen_repPlddt_avgPlddt_LCAtaxId.tsv",
   header = FALSE
 )
 
@@ -156,9 +157,9 @@ genome_stats <- g[names(g) %in% as.numeric(afdb_taxonomy$ncbi_id)]
 # Recombine
 genome_stats <- do.call(rbind, genome_stats)
 
-###########################
+############################
 ##### Save cleaned data#####
-###########################
+############################
 saveRDS(dat, "data/afdb_clusters.RDS")
 saveRDS(afdb_taxonomy, "data/afdb_cluster_taxonomy.RDS")
 saveRDS(cluster_stats, "data/afdb_cluster_stats.RDS")

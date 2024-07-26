@@ -1,8 +1,8 @@
 source("code/protein-universe-utils.R")
 
-###########################################################################
+############################################################################
 ##### Load data (will need to change paths based on whever data end up)#####
-###########################################################################
+############################################################################
 # Load all files
 dat <- readRDS("data/afdb_clusters.RDS")
 afdb_taxonomy <- readRDS("data/afdb_cluster_taxonomy.RDS")
@@ -13,9 +13,9 @@ pdb <- readRDS("data/pdb_metadata.RDS")
 pdb_taxonomy <- readRDS("data/pdb_taxonomy.RDS")
 genome_stats <- readRDS("data/afdb_genome_size_stats.RDS")
 
-####################################################
+#####################################################
 ##### Figure 1: PDB + AFDB species distributions#####
-####################################################
+#####################################################
 # Get overall AFDB species distribution
 afdb_species <- table(dat$taxonomy_ID)
 
@@ -50,11 +50,11 @@ packing <- circleProgressiveLayout(data$value,
   sizetype = "area"
 )
 data <- cbind(data, packing)
-dat.gg <- circleLayoutVertices(packing,
+dat_gg <- circleLayoutVertices(packing,
   npoints = 50
 )
-dat.gg$value <- rep(data$value, each = 51)
-dat.gg$kingdom <- rep(data$kingdom, each = 51)
+dat_gg$value <- rep(data$value, each = 51)
+dat_gg$kingdom <- rep(data$kingdom, each = 51)
 
 cols <- all_colors[5:7]
 names(cols) <- c("Archaea", "Bacteria", "Eukaryota")
@@ -67,7 +67,7 @@ ggplot() +
 
   # Make the bubbles
   geom_polygon(
-    data = dat.gg, aes(x,
+    data = dat_gg, aes(x,
       y,
       group = id,
       fill = as.factor(kingdom)
@@ -102,11 +102,11 @@ packing <- circleProgressiveLayout(data$value,
   sizetype = "area"
 )
 data <- cbind(data, packing)
-dat.gg <- circleLayoutVertices(packing,
+dat_gg <- circleLayoutVertices(packing,
   npoints = 50
 )
-dat.gg$value <- rep(data$value, each = 51)
-dat.gg$kingdom <- rep(data$kingdom, each = 51)
+dat_gg$value <- rep(data$value, each = 51)
+dat_gg$kingdom <- rep(data$kingdom, each = 51)
 
 cols <- all_colors[5:7]
 names(cols) <- c("Archaea", "Bacteria", "Eukaryota")
@@ -119,7 +119,7 @@ ggplot() +
 
   # Make the bubbles
   geom_polygon(
-    data = dat.gg, aes(x,
+    data = dat_gg, aes(x,
       y,
       group = id,
       fill = as.factor(kingdom)
@@ -144,7 +144,8 @@ data <- data.frame(
   group = pdb_names,
   value = pdb_species
 )
-data$kingdom <- pdb_taxonomy$superkingdom[match(data$group, pdb_taxonomy$ncbi_id)]
+data$kingdom <- pdb_taxonomy$superkingdom[match(
+  data$group, pdb_taxonomy$ncbi_id)]
 data <- data[data$kingdom %in% c("Archaea", "Bacteria", "Eukaryota"), ]
 data <- lapply(split(data, data$kingdom), function(x) sum(x$value))
 pie(unlist(data),
@@ -158,7 +159,8 @@ data <- data.frame(
   group = afdb_names,
   value = afdb_species
 )
-data$kingdom <- afdb_taxonomy$superkingdom[match(data$group, afdb_taxonomy$ncbi_id)]
+data$kingdom <- afdb_taxonomy$superkingdom[match(
+  data$group, afdb_taxonomy$ncbi_id)]
 data <- data[data$kingdom %in% c("Archaea", "Bacteria", "Eukaryota"), ]
 data <- lapply(split(data, data$kingdom), function(x) sum(x$value))
 pie(unlist(data),
@@ -202,11 +204,11 @@ text(rep(280000, 2),
   )
 )
 
-###############################################
+################################################
 ##### Figure 2: AFDB taxonomic completeness#####
-###############################################
-# Calculate completeness via phylogenetic distance with 'clade_PD'
-pds_fam <- clade_PD(tree_taxonomy,
+################################################
+# Calculate completeness via phylogenetic distance with 'clade_pd'
+pds_fam <- clade_pd(tree_taxonomy,
   afdb_taxonomy,
   tree,
   taxa1 = "phylum",
@@ -316,9 +318,9 @@ mod <- lm(w_pds ~ n_fams + total_pds)
 # Model summary
 summary(mod)
 
-################################################################################
-##### Figure 3: Foldseek "representative proteins" phylogenetic distribution#####
-################################################################################
+############################################################################
+##### Figure 3: Phylogenetic distribution of "representative proteins" #####
+############################################################################
 # Get overal taxonomy of Foldseek representative proteins
 representatives <- unique(dat$taxonomy_ID[match(
   cluster_stats$cluster_ID,
@@ -347,8 +349,8 @@ names(reps_phyla) <- names(all_phyla)
 # Replace NAs with 0
 reps_phyla[is.na(reps_phyla)] <- 0
 
-# Calculate completeness via phylogenetic distance with 'clade_PD'
-pds_rep <- clade_PD(tree_taxonomy,
+# Calculate completeness via phylogenetic distance with 'clade_pd'
+pds_rep <- clade_pd(tree_taxonomy,
   representatives_taxonomy,
   tree,
   taxa1 = "phylum",
@@ -464,9 +466,9 @@ title(
   cex.main = 1.5
 )
 
-########################################################################
+#########################################################################
 ##### Figure 4: Foldseek representative protein pLDDT distributions######
-########################################################################
+#########################################################################
 # Add ncbi id to cluster_stats (to be used to split and index on species)
 cluster_stats$ncbi <- dat$taxonomy_ID[match(
   cluster_stats$cluster_ID,
@@ -656,9 +658,9 @@ stripchart(plddts,
 # Compare kingdom pLDDTs with Dunn's test
 dunn.test::dunn.test(plddts)
 
-##########################################################################
+###########################################################################
 ##### Figure 5: Effects of data balancing on phylogenetic distribution#####
-##########################################################################
+###########################################################################
 # Split afdb on species
 dat_species <- split(
   dat,
@@ -856,9 +858,9 @@ axis(2,
   las = 2
 )
 
-###################################################################
+####################################################################
 ##### Figure 6: Effects of data balancing on pLDDT distribution#####
-###################################################################
+####################################################################
 # Add ncbi id to cluster_stats
 cluster_stats$ncbi <- dat$taxonomy_ID[match(
   cluster_stats$cluster_ID,
