@@ -13,3 +13,8 @@ Contained are all data necessary to reproduce the analyses in `code/protein-univ
 * `afdb_genome_size_stats.RDS` contains genome statistics for each species in the AFDB (collected from the [NCBI genome database](https://www.ncbi.nlm.nih.gov/genome). Column order: <br>
 
   ```Organism | NCBI taxonomic ID | Genome size | GC% | # genes | # proteins |```  <br>
+
+* `pdb_metadata.RDS` contains the number of protein structures per species in the [Protein Data Bank](www.rcsb.org/stats/explore/scientific_name_of_source_organism). <br>
+* `pdb_taxonomy.RDS` contains taxonomic ranks for each species in the PDB. Format is the same as `afdb_cluster_taxonomy.RDS`. <br>
+* `timetree_phylogeny_cleaned.RDS` is a Newick file of the [timetree.org](https://timetree.org/) phylogeny. <br>
+* `timetree_taxonomy.RDS` contains taxonomic ranks for each species in the Timetree phylogeny. Format is the same as `afdb_cluster_taxonomy.RDS`. <br>
