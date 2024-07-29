@@ -6,5 +6,5 @@ Contained are all data necessary to reproduce the analyses in `code/protein-univ
 
 ### Data description
 `afdb_cluster_stats.RDS` is an overview of Foldseek cluster statistics. More details [here](https://afdb-cluster.steineggerlab.workers.dev/). \
-`afdb_cluster_taxonomy.RDS` contains taxonomic ranks for each species in the AFDB. Columns are:
-  1. Species 2. Genus 3. Family 4. Order 5. Class 6. Phylum 7. Kingdom 8. Superkingdom/domain 9. NCBI taxonomic id
+`afdb_cluster_taxonomy.RDS` contains taxonomic ranks for each species in the AFDB. Columns are ordered as follows:
+```Species | Genus | Family | Order | Class | Phylum | Kingdom | Superkingdom/domain | NCBI taxonomic id```
