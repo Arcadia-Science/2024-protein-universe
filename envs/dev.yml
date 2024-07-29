@@ -2,6 +2,7 @@ channels:
   - conda-forge
   - bioconda
   - defaults
+  - r
 dependencies:
   - jupyter=1.0.0
   - r-base=4.3.2
