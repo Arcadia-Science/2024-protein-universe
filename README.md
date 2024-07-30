@@ -48,7 +48,8 @@ The repository is organized into the following top-level directories.
   ├── timetree_phylogeny_cleaned.RDS
   └── timetree_taxonomy.RDS
 ─ envs
-  └── dev.yml
+  ├── dev.yml
+  └── install_r_packages.R
 ```
 
 ### Methods
