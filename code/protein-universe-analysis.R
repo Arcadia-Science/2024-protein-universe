@@ -28,11 +28,14 @@ afdb_species <- as.numeric(afdb_species)
 # Get overall PDB species distribution (need to replace commas in totals)
 pdb_species <- as.numeric(gsub(",", "", pdb[, 2]))
 
+# Ensure NCBI taxonomy database is available (built by protein-universe-data.R)
+prepareDatabase(getAccessions = FALSE)
+
 # Get PDB names
 pdb_names <- name2taxid(pdb$V1, out_type = "summary")$id
 
 # PDB: circle packing plot
-png("~/Desktop/pdb_circle_packing.png", width = 2400, height = 2400)
+png("figures/pdb_circle_packing.png", width = 2400, height = 2400)
 
 
 data <- data.frame(
@@ -86,7 +89,7 @@ ggplot() +
 dev.off()
 
 # AFDB: circle packing plot
-png("~/Desktop/afdb_circle_packing.png", width = 2400, height = 2400)
+png("figures/afdb_circle_packing.png", width = 2400, height = 2400)
 data <- data.frame(
   group = afdb_names,
   value = afdb_species
@@ -219,7 +222,7 @@ pds_fam <- clade_PD(tree_taxonomy,
 weighted_pds <- sapply(
   pds_fam$phylogenetic_distance,
   function(x) x$weighted_PD
-))
+)
 
 # Split by kingdom
 weighted_pds <- split(
@@ -810,7 +813,7 @@ for (i in 1:length(pds)) {
   setTxtProgressBar(pb, i)
 
   # Calculate n clusters within partition
-  n_clusters <- length(unique(dat$` cluster_ID`[dat$taxonomy_ID %in%
+  n_clusters <- length(unique(dat$`cluster_ID`[dat$taxonomy_ID %in%
     pds[[i]]$taxonomy$ncbi_id]))
 
   # Normalize by total number of clusters ('clusters_total')

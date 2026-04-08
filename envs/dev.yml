@@ -13,3 +13,4 @@ dependencies:
   - r-ggplot2=3.5.1
   - r-dunn.test=1.3.5
   - r-caper=1.0.3
+  - r-devtools=2.4.5
